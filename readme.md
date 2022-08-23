@@ -1,6 +1,8 @@
 # Godot Navigation Regions Test
 The purpose of this sample project is to examine Godot's behavior (on v3.5) with overlapping navigation regions on different layers. I have created two scenes, each with two tilemaps that have navigation shapes on the tiles. The two tilemaps are assigned different navigation layers (1 and 2), and then two sprites are placed in the level and each attempts to use `Navigation2DServer.map_get_path` to generate a path towards a shared goal, but one is using layer 1, and the other is using layer 2.
 
+For ease of editing I added a visual layer to each tilemap, with a blue one for navigation layer 1 and a pink one for navigation layer 2. Note for the screenshots below: that when they overlap, you only see the pink one because it comes second on the scene tree, but I promise there is an identical blue layer beneath it.
+
 The two scenes are different in that `TestScene1` has the two tilemaps overlapping completely:
 ![Test Scene 1 setup](./screenshots/TestScene1Setup.png)
 
